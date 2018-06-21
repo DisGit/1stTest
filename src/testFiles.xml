@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Tset1" parallel="false" thread-count="1" verbose="2">
+	<test name="Test1">
+	    <classes>
+        	<!--  <class name="jira.disTests.TMPnew" ></class> -->
+        	<!--   <class name="gweb.TMPnew" ></class>		-->
+        	<class name="pcg1.Test1" ></class>
+    	</classes>
+	</test>
+</suite>
