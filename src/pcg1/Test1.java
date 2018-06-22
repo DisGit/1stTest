@@ -40,7 +40,7 @@ public class Test1 {
 	    driver.manage().window().maximize();   // maximize window
 	    driver.get(URL);
 		
-		System.out.println("Debug: Zacal program zacne inicializacia");
+		System.out.println("Debug: Zacal program zacne vykonavanie testu");
 		driver.findElement(By.cssSelector("[id$=username]")).sendKeys(username);
 		driver.findElement(By.cssSelector("[id$=password]")).sendKeys(password);
 		driver.findElement(By.xpath(".//input[contains(@id,'login')] | .//input[@id='submit'] | .//*[@id='login']")).click();
