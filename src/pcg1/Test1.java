@@ -52,6 +52,7 @@ public class Test1 {
 		
 		driver.findElement(By.linkText("Nastavenia")).click();
 		driver.findElement(By.xpath(".//*[@id='person-settings']")).click();
+		System.out.println("Test success");
 		
 	}
 	
