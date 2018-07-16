@@ -23,8 +23,8 @@ public class Test1 {
 	@BeforeTest
     public void setUp(){
 		
-		username = "andrejkovic";
-		password = "iisLog1n";
+		username = "testai";
+		password = "testai";
 		
 		String geckodriverPath = "/home/testai/Downloads/geckodriver";
 		//String geckodriverPath = "D:\\AI\\FFDriver\\geckodriver.exe";
