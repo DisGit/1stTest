@@ -28,8 +28,8 @@ public class Test1 {
 		username = "testai";
 		password = "testai";
 		
-		//String geckodriverPath = "/home/testai/Downloads/geckodriver";
-		String geckodriverPath = "D:\\AI\\FFDriver\\geckodriver.exe";
+		String geckodriverPath = "/home/testai/Downloads/geckodriver";
+		//String geckodriverPath = "D:\\AI\\FFDriver\\geckodriver.exe";
 		
 		System.setProperty("webdriver.gecko.driver",geckodriverPath);
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
