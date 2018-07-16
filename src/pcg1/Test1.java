@@ -1,5 +1,7 @@
 package pcg1;
 
+import static org.testng.Assert.*;
+
 import java.io.IOException;
 
 import org.openqa.selenium.By;
@@ -26,8 +28,8 @@ public class Test1 {
 		username = "testai";
 		password = "testai";
 		
-		String geckodriverPath = "/home/testai/Downloads/geckodriver";
-		//String geckodriverPath = "D:\\AI\\FFDriver\\geckodriver.exe";
+		//String geckodriverPath = "/home/testai/Downloads/geckodriver";
+		String geckodriverPath = "D:\\AI\\FFDriver\\geckodriver.exe";
 		
 		System.setProperty("webdriver.gecko.driver",geckodriverPath);
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
@@ -50,10 +52,14 @@ public class Test1 {
 	@Test			//(dependsOnMethod="methodNamewihtout()") //alwaysRun=true
 	public void test() throws InterruptedException, IOException{
 		
-		driver.findElement(By.linkText("Nastavenia")).click();
-		driver.findElement(By.xpath(".//*[@id='person-settings']")).click();
-		System.out.println("Test success");
+		String previousUrl = driver.getCurrentUrl();
 		
+		//driver.findElement(By.linkText("Nastavenia")).click();
+		driver.findElement(By.linkText("Settings")).click();
+		//driver.findElement(By.xpath(".//*[@id='person-settings']")).click();
+		
+		String currentUrl = driver.getCurrentUrl();
+		assertNotEquals("Nezhoduje sa URL",previousUrl,currentUrl);
 	}
 	
 	@AfterTest
